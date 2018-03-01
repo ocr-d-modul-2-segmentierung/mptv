@@ -1,0 +1,67 @@
+import os
+import argparse
+import subprocess
+import shutil
+
+os.environ["OMP_NUM_THREADS"] = "1"
+
+parser = argparse.ArgumentParser()
+parser.add_argument("dirs", nargs="+", help="input directories containing lines")
+parser.add_argument("--rpred", type=str,
+                    default="/home/reul/Documents/Projects/ocropus_mptv/ocropus-rpred")
+parser.add_argument("--model_dir", type=str, default="Data/Models/BestModels")
+parser.add_argument("--file_ext", type=str, default=".png",
+                    help="file extension of the image files used for training")
+parser.add_argument("-Q", "--cores", type=int, default=1)
+
+args = parser.parse_args()
+args.rpred = os.path.expanduser(args.rpred)
+
+assert(os.path.isdir(args.model_dir))
+
+models = sorted([m for m in os.listdir(args.model_dir) if m.endswith('.pyrnn.gz')])
+
+assert(len(models) > 1)
+
+dirs = sorted([d for d in args.dirs
+               if os.path.isdir(d)
+               and any(f.endswith(args.file_ext) for f in os.listdir(d))])
+
+assert(len(dirs) > 0)
+
+def mkdir(d):
+    if not os.path.isdir(d):
+        os.makedirs(d)
+
+lines = []
+
+for d in dirs:
+    voting_path = os.path.join(d, "Voting")
+    mkdir(voting_path)
+    mkdir(os.path.join(voting_path, "Voted"))
+
+    for m in models:
+        model_name = os.path.basename(m).split(".pyrnn.gz")[0]
+        mkdir(os.path.join(voting_path, model_name))
+
+    lines += [os.path.join(d, "*" + args.file_ext)]
+
+    #print(lines)
+
+assert(len(lines) > 0)
+
+for m in models:
+    subprocess.call(["python", args.rpred, "-n", "-Q", str(args.cores), "--llocsext",
+                     "-m", os.path.join(args.model_dir, m)] + lines)
+
+    for d in dirs:
+        results = [os.path.join(d, f) for f in os.listdir(d)
+                   if f.endswith(".extLlocs") or
+                   (f.endswith(".txt") and not f.endswith(".gt.txt"))]
+        result_dir = os.path.join(d, "Voting",
+                                  os.path.basename(m).split(".pyrnn.gz")[0])
+
+        for result in results:
+            if os.path.isfile(result):
+                shutil.copy(result, result_dir)
+                os.remove(result)
