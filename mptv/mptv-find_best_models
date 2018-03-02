@@ -1,0 +1,85 @@
+#!/usr/bin/env python
+
+import os
+import argparse
+import subprocess
+from shutil import copyfile
+
+os.environ["OMP_NUM_THREADS"] = "1"
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--input_dir", type=str, default="Data",
+                    help="the directory created by mptv-multi_train; expected sub directories: 'Folds', 'Models'")
+parser.add_argument("--file_ext", type=str, default=".png",
+                    help="file extension of the image files used for finding the best models")
+#parser.add_argument("--rpred", type=str,
+#                    default="/home/reul/Documents/Projects/ocropus_mptv/ocropus-rpred",
+#                    help="path to ocropus-rpred")
+#parser.add_argument("--errs", type=str, default="/home/reul/Documents/Projects/ocropus_mptv/ocropus-errs")
+parser.add_argument("-Q", "--cores", type=int, default=1)
+
+args = parser.parse_args()
+#args.rpred = os.path.expanduser(args.rpred)
+#args.errs = os.path.expanduser(args.errs)
+input_dir = args.input_dir
+
+dirs_to_process = []
+
+first_length = -1
+
+folds_dir = os.path.join(input_dir, "Folds")
+assert (os.path.exists(folds_dir))
+models_dir = os.path.join(input_dir, "Models")
+assert (os.path.exists(models_dir))
+
+best_models_folder = os.path.join(models_dir, "BestModels")
+
+if not os.path.exists(best_models_folder):
+    os.makedirs(best_models_folder)
+
+
+def run_single(fold_id, models):
+    print("processing fold: %s" % fold_id)
+
+    best_model = ""
+    lowest_error = 10.0 ** 10
+
+    fold_dir = os.path.join(folds_dir, fold_id)
+
+    file = open(os.path.join(models_dir, "modeltest_" + fold_id + ".csv"), "w")
+    file.write("Model,CER\n")
+
+    for model in models:
+        subprocess.call(["ocropus-rpred", "-n", "-Q", str(args.cores),
+                         "-m", os.path.join(models_dir, fold_id, model),
+                         os.path.join(fold_dir, "*" + args.file_ext)])
+
+        process = subprocess.Popen(["ocropus-errs", "-Q", str(args.cores),
+                                    os.path.join(folds_dir, fold_id, "*.gt.txt")],
+                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+        out, err = process.communicate()
+        lines = out.decode("UTF-8").split("\n")
+        lines = [line for line in lines if line.startswith("err")
+                 and not line.startswith("errnomiss") and line.endswith("%")]
+        file.write(model + ",")
+        error = float(lines[0].split()[1])
+        file.write(str(error) + "\n")
+        file.flush()
+
+        if error <= lowest_error:
+            lowest_error = error
+            best_model = model
+
+    copyfile(os.path.join(models_dir, fold_id, best_model),
+             os.path.join(best_models_folder, "BM%s.pyrnn.gz" % fold_id))
+    file.close()
+
+
+for fold_id in os.listdir(folds_dir):
+    model_dir = os.path.join(models_dir, fold_id)
+
+    assert(os.path.isdir(model_dir))
+    models = sorted([m for m in os.listdir(model_dir) if m.endswith(".pyrnn.gz")])
+
+    run_single(fold_id, models)
