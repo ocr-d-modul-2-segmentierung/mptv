@@ -9,15 +9,12 @@ os.environ["OMP_NUM_THREADS"] = "1"
 
 parser = argparse.ArgumentParser()
 parser.add_argument("dirs", nargs="+", help="input directories containing lines")
-#parser.add_argument("--rpred", type=str,
-#                    default="/home/reul/Documents/Projects/ocropus_mptv/ocropus-rpred")
 parser.add_argument("--model_dir", type=str, default="Data/Models/BestModels")
 parser.add_argument("--file_ext", type=str, default=".png",
                     help="file extension of the image files used for training")
 parser.add_argument("-Q", "--cores", type=int, default=1)
 
 args = parser.parse_args()
-#args.rpred = os.path.expanduser(args.rpred)
 
 assert(os.path.isdir(args.model_dir))
 
@@ -47,8 +44,6 @@ for d in dirs:
         mkdir(os.path.join(voting_path, model_name))
 
     lines += [os.path.join(d, "*" + args.file_ext)]
-
-    #print(lines)
 
 assert(len(lines) > 0)
 

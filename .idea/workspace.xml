@@ -14,44 +14,10 @@
       <file leaf-file-name="mptv-setup_folds" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mptv-recognize_lines" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mptv-conf_vote" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="256" column="18" lean-forward="true" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
-              <folding>
-                <element signature="e#23#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="voting.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ocrolib/voting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="248" column="25" lean-forward="true" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,8 +26,8 @@
       <file leaf-file-name="mptv-run_multi_train" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="69" lean-forward="true" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+            <state relative-caret-position="-114">
+              <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
               </folding>
@@ -72,9 +38,31 @@
       <file leaf-file-name="mptv-find_best_models" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mptv-recognize_lines" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="606">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mptv-conf_vote" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+              <folding>
+                <element signature="e#23#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,7 +80,6 @@
     <findStrings>
       <find>alls</find>
       <find>estimate_skew_angle</find>
-      <find>tran</find>
       <find>clip</find>
       <find>normalize_raw_image</find>
       <find>angle</find>
@@ -113,6 +100,8 @@
       <find>for vot</find>
       <find>sorted</find>
       <find>print(</find>
+      <find>tran</find>
+      <find>glob</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,23 +113,23 @@
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/mptv/mptv-find_best_models.py" />
         <option value="$PROJECT_DIR$/mptv/mptv-run_multi_train.py" />
-        <option value="$PROJECT_DIR$/ocrolib/lstm.py" />
         <option value="$PROJECT_DIR$/ocropus-gpageseg" />
         <option value="$PROJECT_DIR$/ocropus-nlbin" />
         <option value="$PROJECT_DIR$/mptv/mptv-recognize_lines.py" />
         <option value="$PROJECT_DIR$/ocropus-rpred" />
         <option value="$PROJECT_DIR$/mptv/mptv-setup_folds.py" />
         <option value="$PROJECT_DIR$/mptv/mptv-conf_vote.py" />
-        <option value="$PROJECT_DIR$/mptv/mptv-setup_folds" />
+        <option value="$PROJECT_DIR$/ocrolib/voting.py" />
+        <option value="$PROJECT_DIR$/ocrolib/lstm.py" />
+        <option value="$PROJECT_DIR$/mptv/mptv-recognize_lines" />
+        <option value="$PROJECT_DIR$/mptv/mptv-conf_vote" />
         <option value="$PROJECT_DIR$/mptv/mptv-run_multi_train" />
         <option value="$PROJECT_DIR$/mptv/mptv-find_best_models" />
-        <option value="$PROJECT_DIR$/mptv/mptv-recognize_lines" />
-        <option value="$PROJECT_DIR$/ocrolib/voting.py" />
-        <option value="$PROJECT_DIR$/mptv/mptv-conf_vote" />
+        <option value="$PROJECT_DIR$/mptv/mptv-setup_folds" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="87" />
     <option name="y" value="102" />
     <option name="width" value="1717" />
@@ -162,6 +151,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,12 +174,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -224,19 +213,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1173" extended-state="7" />
-    <editor active="true" />
+    <frame x="87" y="102" width="1920" height="1173" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -255,66 +243,131 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds.py">
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines.py">
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote.py">
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2412">
-          <caret line="137" column="14" lean-forward="true" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="4536">
+          <caret line="256" column="18" lean-forward="false" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models.py">
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="414">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds.py">
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="936">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train.py">
+    <entry file="file://$PROJECT_DIR$/ocrolib/voting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="63" lean-forward="true" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+        <state relative-caret-position="4410">
+          <caret line="248" column="25" lean-forward="false" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4536">
+          <caret line="256" column="18" lean-forward="true" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocrolib/voting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4410">
+          <caret line="248" column="25" lean-forward="true" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="69" lean-forward="true" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train.py" />
     <entry file="file://$PROJECT_DIR$/ocropus-errs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -338,13 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocrolib/lstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="561" column="54" lean-forward="false" selection-start-line="561" selection-start-column="54" selection-end-line="561" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ocropus-rpred">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -352,96 +398,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds.py">
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models.py" />
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote.py" />
+    <entry file="file://$PROJECT_DIR$/ocrolib/lstm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="373">
+          <caret line="792" column="0" lean-forward="true" selection-start-line="792" selection-start-column="0" selection-end-line="792" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train.py">
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="606">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ocrolib/voting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="248" column="25" lean-forward="true" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="25" />
+        <state relative-caret-position="18">
+          <caret line="248" column="25" lean-forward="false" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="25" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds">
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="378">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-recognize_lines">
+    <entry file="file://$PROJECT_DIR$/ocrolib/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="406">
+          <caret line="565" column="23" lean-forward="true" selection-start-line="565" selection-start-column="23" selection-end-line="565" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mptv/mptv-conf_vote">
+    <entry file="file://$PROJECT_DIR$/ocropus-rtrain">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="256" column="18" lean-forward="true" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
+        <state relative-caret-position="-1350">
+          <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-setup_folds">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mptv/mptv-find_best_models">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mptv/mptv-run_multi_train">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="69" lean-forward="true" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+        <state relative-caret-position="-114">
+          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>

@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
 import os
-import sys
 import argparse
-#sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
 import ocrolib
+import glob
 from shutil import copyfile
 
 parser = argparse.ArgumentParser()
@@ -15,9 +14,12 @@ parser.add_argument("--output", type=str, default="Data", help="output folder")
 
 args = parser.parse_args()
 
-line_candidates = args.files
 number_of_folds = args.folds
 output_dir = args.output
+line_candidates = []
+
+for f in args.files:
+    line_candidates += glob.glob(f)
 
 assert(number_of_folds > 1)
 assert(not os.path.isdir(output_dir))
@@ -39,8 +41,6 @@ output_dir = os.path.join(output_dir, "Folds")
 for i in range(0, number_of_folds):
     if not os.path.exists(os.path.join(output_dir,str(i))):
         os.makedirs(os.path.join(output_dir,str(i)))
-
-#print(lines)
 
 for i, line in enumerate(lines):
     fold = i%number_of_folds

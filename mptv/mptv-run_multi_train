@@ -22,16 +22,12 @@ parser.add_argument("--whitelist", type=str,
                     help="list of characters which won't be deleted from the codec")
 parser.add_argument("--models", type=str, default="LH,LH,FRK,ENG,ENG",
                     help="pretrained models to be matched to the training folds")
-#parser.add_argument("--rtrain", type=str,
-#                    default="/home/reul/Documents/Projects/ocropus_mptv/ocropus-rtrain",
-#                    help="path to ocropus-rtrain")
 
 args = parser.parse_args()
 dir_re = re.compile("[0-9]+")
 
 models_to_load = args.models.split(",")
 args.models_dir = os.path.expanduser(args.models_dir)
-#args.rtrain = os.path.expanduser(args.rtrain)
 
 input_dir = args.input_dir
 folds_dir = os.path.join(input_dir, "Folds")
@@ -39,9 +35,6 @@ output_dir = os.path.join(input_dir, "Models")
 
 assert(os.path.exists(args.models_dir))
 assert(not os.path.exists(output_dir))
-
-#if os.path.exists(output_dir):
-#    shutil.rmtree(output_dir)
 
 #check models
 for model_id in models_to_load:
@@ -88,13 +81,13 @@ assert(len(models_to_load) == len(train_lines) == len(output_model_dirs))
 def run_single(params):
     lines, model, output_model_dir = params
 
-    subprocess.call(["ocropus-rtrain",
-                     "-c", os.path.join(folds_dir, "*", "*.gt.txt"),]
-                    + [] if len(model) == 0 else ["--load", os.path.join(args.models_dir, model + ".pyrnn.gz"),]
-                    + ["-o", output_model_dir + "/",
-                     "--start", "0",
-                     "-N", str(args.train_steps)] + lines)
 
+    call = ["ocropus-rtrain", "-c", os.path.join(folds_dir, "*", "*.gt.txt"),] \
+            + ([] if len(model) == 0 else ["--load", os.path.join(args.models_dir, model + ".pyrnn.gz"),]) \
+            + ["-o", output_model_dir + "/", "--start", "0", "-N", str(args.train_steps)]
+    print(call, "lines")
+
+    subprocess.call(call + lines)
 
 p = multi.Pool(len(train_lines))
 p.map(run_single, zip(train_lines, models_to_load, output_model_dirs))

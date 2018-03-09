@@ -16,9 +16,6 @@ input_dirs = args.input_dirs
 
 
 def load_llocs(link):
-    #file = open(link, "r")
-    #data = file.read()
-
     with codecs.open(link, encoding='utf-8') as file:
         data = file.read()
 
@@ -116,8 +113,6 @@ def find_voters_with_most_frequent_legth(sync, voters):
             most_freq_length = length
             occurrences = lengths[length]
 
-    #print(most_freq_length)
-
     actual_voters = []
 
     for i, voter in enumerate(voters):
@@ -154,7 +149,6 @@ def perform_conf_vote(voters):
     final_result = ""
 
     for sync in synclist:
-        #print(sync)
         actual_voters, most_freq_length = find_voters_with_most_frequent_legth(sync, voters)
 
         #check if all voters agree
@@ -174,9 +168,7 @@ def perform_conf_vote(voters):
         if len(actual_voters) == 1:
             final_result += voters[actual_voters[0]][1][sync.start(actual_voters[0]):sync.stop(actual_voters[0]) + 1]
         else:
-            #print(len(actual_voters))
             for i in range(most_freq_length):
-                #print(i)
                 sum = {}
 
                 for idx, voter in enumerate(actual_voters):
@@ -186,15 +178,11 @@ def perform_conf_vote(voters):
                     if len(new_llocs) == 0:
                         continue
 
-                    #print(new_llocs[0])
-
                     add_llocs(sum, new_llocs[0])
 
                 if len(sum) > 0:
                     final_result += get_most_likely_char(sum)
-                    #print(final_result)
                 else:
-                    #print(voter, new_llocs)
                     skipped += 1
 
         print(final_result)
@@ -206,7 +194,6 @@ def process_dir(fold_dirs, ocr):
     global all
     global skipped
 
-    #print(ocr)
     results = []
 
     first_result = init_ocr_result(fold_dirs[0], ocr)
@@ -248,19 +235,9 @@ for dir in input_dirs:
                    if txt.endswith(".txt") and not txt.endswith(".gt.txt")]
 
     for ocr in ocr_outputs:
-        #if not ocr == "0138__000__paragraph__007.txt":
-        #    continue
-
-
         final_result = process_dir(fold_dirs, ocr)
 
-        print(ocr)
-
         if final_result != None:
-            #text_file = open(os.path.join(dir, "Voted", ocr), "w")
-            #text_file.write(final_result)
-            #text_file.close()
-
             with codecs.open(os.path.join(dir, "Voted", ocr), "w", encoding="utf-8") as f:
                 f.write(final_result)
 

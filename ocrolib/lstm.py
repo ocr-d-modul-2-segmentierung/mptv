@@ -442,17 +442,17 @@ def forward_py(n,N,ni,ns,na,xs,source,gix,gfx,gox,cix,gi,gf,go,ci,state,output,W
 
 
 def backward_py(n,N,ni,ns,na,deltas,
-                    source,
-                    gix,gfx,gox,cix,
-                    gi,gf,go,ci,
-                    state,output,
-                    WGI,WGF,WGO,WCI,
-                    WIP,WFP,WOP,
-                    sourceerr,
-                    gierr,gferr,goerr,cierr,
-                    stateerr,outerr,
-                    DWGI,DWGF,DWGO,DWCI,
-                    DWIP,DWFP,DWOP):
+                source,
+                gix,gfx,gox,cix,
+                gi,gf,go,ci,
+                state,output,
+                WGI,WGF,WGO,WCI,
+                WIP,WFP,WOP,
+                sourceerr,
+                gierr,gferr,goerr,cierr,
+                stateerr,outerr,
+                DWGI,DWGF,DWGO,DWCI,
+                DWIP,DWFP,DWOP):
     """Perform backward propagation of deltas for a simple LSTM layer."""
     for t in reversed(range(n)):
         outerr[t] = deltas[t]
@@ -770,23 +770,28 @@ def translate_back_locations_extended(network, threshold=0.7):
     x = []
 
     def find_alternatives(char,start,end,maxProb):
-	alt = []
+        alt = []
 
-	symbols = ""
+        symbols = ""
 
-    	for lbl in range(len(outputs[0])):
-	    alt.append([lbl,0])
-	    symbols += network.l2s([lbl])
+        for lbl in range(len(outputs[0])):
+            alt.append([lbl,0])
+            symbols += network.l2s([lbl])
 
-	for pos in range (start, end):
-	    for lbl in range (len(outputs[pos,:])):
-		if lbl != char:
-		    prob = outputs[pos,lbl]
-		    if prob > 0.01:
-		        if prob > alt[lbl][1]:
-			   alt[lbl][1] = prob
-	
-	return char, start, end, maxProb, alt
+        for pos in range(start, end):
+            for lbl in range(len(outputs[pos,:])):
+                if lbl != char:
+                    prob = outputs[pos,lbl]
+                    if prob > 0.01:
+                        if prob > alt[lbl][1]:
+                            alt[lbl][1] = prob
+                            #alt[lbl][1] += prob
+                #else:
+                #    prob = outputs[pos, char]
+                #    if prob > 0.01:
+                #        maxProb += prob
+
+        return char, start, end, maxProb, alt
 
     for idx, val in enumerate(labels):
         if val != 0 and start is None:
@@ -958,7 +963,7 @@ class SeqRecognizer:
         self.lstm.setLearningRate(r,momentum)
     def predictSequence(self,xs):
         "Predict an integer sequence of codes."
-        assert xs.shape[1]==self.Ni,\
+        assert xs.shape[1]==self.Ni, \
             "wrong image height (image: %d, expected: %d)"%(xs.shape[1],self.Ni)
         self.outputs = np.array(self.lstm.forward(xs))
         return translate_back(self.outputs)

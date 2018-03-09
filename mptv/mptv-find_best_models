@@ -12,15 +12,9 @@ parser.add_argument("--input_dir", type=str, default="Data",
                     help="the directory created by mptv-multi_train; expected sub directories: 'Folds', 'Models'")
 parser.add_argument("--file_ext", type=str, default=".png",
                     help="file extension of the image files used for finding the best models")
-#parser.add_argument("--rpred", type=str,
-#                    default="/home/reul/Documents/Projects/ocropus_mptv/ocropus-rpred",
-#                    help="path to ocropus-rpred")
-#parser.add_argument("--errs", type=str, default="/home/reul/Documents/Projects/ocropus_mptv/ocropus-errs")
 parser.add_argument("-Q", "--cores", type=int, default=1)
 
 args = parser.parse_args()
-#args.rpred = os.path.expanduser(args.rpred)
-#args.errs = os.path.expanduser(args.errs)
 input_dir = args.input_dir
 
 dirs_to_process = []
