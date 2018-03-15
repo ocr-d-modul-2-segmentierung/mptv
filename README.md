@@ -1,7 +1,22 @@
-Bitte irgendwo hin clonen und Ordnerstruktur beibehalten.  
-Numpy wird benötigt.  
-Alle Skripte bis auf conf_vote müssen mit Python 2 aufgerufen werden, also "python .../mptv/mptv-setup_folds.py ...".  
-Für conf_vote bitte vorerst noch "python3 .../mptv/mptv-conf_vote.py ...". Mit Python 2 passieren eigenartige Fehler. Wird natürlich (hoffentlich) noch behoben.
+## Installing
+
+#### Clone Repository
+`git clone https://gitlab2.informatik.uni-wuerzburg.de/chr58bk/mptv.git`
+
+#### Setup and Activate Virtual Enviroment
+`python -m pip install --user virtualenv`
+
+`python -m virtualenv path/to/venv`
+
+`source path/to/venv/bin/activate`
+
+#### Install Requirements and Run MPTV Setup
+`pip install -r requirements.txt`
+
+`python setup.py install`
+
+
+## Usage (...)
 
 ### mptv-setup_folds
 Input: Liste von Bildern (\*.png, \*.bin.png, \*.nrm.png, + zugehörige GT (\*.gt.txt))  
