@@ -19,6 +19,9 @@ from ocrolib import lstm
 from ocrolib import edist
 from ocrolib.exceptions import FileNotFound, OcropusException
 
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 parser = argparse.ArgumentParser("apply an RNN recognizer")
 
 # error checking

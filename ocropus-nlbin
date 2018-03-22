@@ -54,6 +54,7 @@ if len(args.files)<1:
 
 def print_info(*objs):
     print("INFO: ", *objs, file=sys.stdout)
+    sys.stdout.flush()
 
 
 def print_error(*objs):

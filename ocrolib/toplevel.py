@@ -387,7 +387,7 @@ def DARK(a):
     return np.median(a)<=np.mean(a)
 @makeargcheck("expect a page image (larger than 600x600)",warning=1)
 def PAGE(a):
-    return a.ndim==2 and a.shape[0]>=600 and a.shape[1]>=600
+    return a.ndim==2
 @makeargcheck("expected a line image (taller than 8 pixels and wider than tall)",warning=1)
 def LINE(a,var=None):
     return a.ndim==2 and a.shape[0]>8 # and a.shape[1]>a.shape[0]
