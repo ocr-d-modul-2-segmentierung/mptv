@@ -246,9 +246,11 @@ def process1(job):
         plt.imshow(bin)
         plt.ginput(1,max(0.1,args.debug))
     if args.output:
-        if args.rawcopy: ocrolib.write_image_gray(args.output+"/%04d.raw.png"%i,raw)
-        ocrolib.write_image_binary(args.output+"/%04d.bin.png"%i,bin)
-        ocrolib.write_image_gray(args.output+"/%04d.nrm.png"%i,flat)
+        base,_ = ocrolib.allsplitext(fname)
+        file_name = os.path.basename(base)
+        if args.rawcopy: ocrolib.write_image_gray(args.output+"/"+file_name+".raw.png",raw)
+        ocrolib.write_image_binary(args.output+"/"+file_name+".bin.png",bin)
+        ocrolib.write_image_gray(args.output+"/"+file_name+".nrm.png",flat)
     else:
         base,_ = ocrolib.allsplitext(fname)
         ocrolib.write_image_binary(base+".bin.png",bin)
