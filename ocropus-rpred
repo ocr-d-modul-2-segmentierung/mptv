@@ -78,6 +78,7 @@ args = parser.parse_args()
 
 def print_info(*objs):
     print("INFO: ", *objs, file=sys.stdout)
+    sys.stdout.flush()
 
 
 def print_error(*objs):

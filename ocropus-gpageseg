@@ -132,6 +132,7 @@ def check_page(image):
 
 def print_info(*objs):
     print("INFO: ", *objs, file=sys.stdout)
+    sys.stdout.flush()
 
 
 def print_error(*objs):
