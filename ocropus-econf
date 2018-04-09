@@ -16,6 +16,9 @@ import numpy as np
 import ocrolib
 from ocrolib import edist
 
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 # disable rank warnings from polyfit
 warnings.simplefilter('ignore',np.RankWarning)
 
