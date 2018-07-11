@@ -28,8 +28,7 @@ The folder id gets placed in front of the line name in order to prevent overwrit
 Input: folder containing the "Folds" sub folder.  
 Output: "Models" folder which containes the trained models for each fold.
 
---models: "LH,LH,FRK,ENG,ENG" means that the first two folds starts training from LH fold 3 from ENG, and fold 4 and 5 from FRK with LH, ENG, 
-
+--models: "LH,LH,FRK,ENG,ENG" means that the first two folds starts training from LH fold 3 from ENG, and fold 4 and 5 from FRK with LH, ENG,  
 and FRK being different mixed models from the pretraining folder.
 "LH,,,,LH" starts the training of fold 1 and 5 from LH and trains the rest from scratch.
 
